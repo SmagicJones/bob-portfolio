@@ -47,7 +47,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   return (
-    <main>
+    <main className="bg-slate-500 h-screen">
       <DesktopNav />
       <MobileNav />
       <Outlet />

@@ -35,20 +35,16 @@ export default function MobileNav() {
     <main class="sort-out">
       <div className="mobile w-[100%] flex justify-between">
         <NavLink to="/" className="logo" onClick={handleMenu}>
-          <img
+          {/* <img
             width="83.5"
             height="48"
             src="https://www.teamleyland.com/wp-content/themes/ilab/img/team-leyland-logo.png"
-          />
+          /> */}
+          {/* <div className="flex justify-center items-center">
+            <h1 className="text-2xl">Bob Holland</h1>
+          </div> */}
         </NavLink>
         <div className="p-4">
-          {/* <label className="hamburger-menu">
-            <input
-              type="checkbox"
-              ref={checkboxRef}
-              onClick={() => setMenuOpen(!menuOpen)}
-            />
-          </label> */}
           <Drawer direction="right">
             <DrawerTrigger>
               <MenuIcon className="z-10" />
@@ -67,8 +63,18 @@ export default function MobileNav() {
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/pages">
-                      <DrawerClose>Pages</DrawerClose>
+                    <NavLink to="/about">
+                      <DrawerClose>About</DrawerClose>
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/work">
+                      <DrawerClose>Work</DrawerClose>
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/projects">
+                      <DrawerClose>Projects</DrawerClose>
                     </NavLink>
                   </li>
                   <li>
