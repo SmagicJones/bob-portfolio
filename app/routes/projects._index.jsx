@@ -31,9 +31,19 @@ export default function Projects() {
             <CardContent>
               <p>{project.short_content}</p>
             </CardContent>
-            <CardFooter>
+            <CardFooter className="">
               <Link to={`/projects/${project.slug}`}>
                 <Button>Learn More</Button>
+              </Link>
+              <Link
+                to={project.hosted_link}
+                target="_blank"
+                className="pl-2 pr-2"
+              >
+                <Button>Hosted Project</Button>
+              </Link>
+              <Link to={project.github_link} target="_blank">
+                <Button>Github Repository</Button>
               </Link>
             </CardFooter>
           </Card>

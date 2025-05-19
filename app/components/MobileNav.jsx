@@ -68,8 +68,8 @@ export default function MobileNav() {
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/work">
-                      <DrawerClose>Work</DrawerClose>
+                    <NavLink to="/products">
+                      <DrawerClose>Products</DrawerClose>
                     </NavLink>
                   </li>
                   <li>

@@ -145,7 +145,7 @@ export default function DesktopNav() {
               <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
-                    <NavLink to="/collections">
+                    <NavLink to="/products">
                       <div className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
                         <div className="mb-2 mt-4 text-lg font-medium">
                           Live Examples
@@ -161,7 +161,7 @@ export default function DesktopNav() {
                 <ul>
                   <li>
                     <NavLink
-                      to="/collections/ultimaker"
+                      to="/products"
                       className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                     >
                       <div className="text-sm font-medium leading-none">
@@ -226,7 +226,7 @@ export default function DesktopNav() {
                 <ul>
                   <li>
                     <NavLink
-                      to="/collections/ultimaker"
+                      to="/projects/mongo-remix-movies"
                       className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                     >
                       <div className="text-sm font-medium leading-none">
@@ -240,7 +240,7 @@ export default function DesktopNav() {
                   </li>
                   <li>
                     <NavLink
-                      to="/collections/photocentric"
+                      to="/projects/darwen-masters-swimming"
                       className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                     >
                       <div className="text-sm font-medium leading-none">
