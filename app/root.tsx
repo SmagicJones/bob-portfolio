@@ -47,11 +47,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   return (
-    <main className="h-screen">
-      <DesktopNav />
-      <MobileNav />
-      <Outlet />
-    </main>
+    <>
+      <div className="w-[100%]">
+        <DesktopNav />
+        <MobileNav />
+        <div>
+          <Outlet />
+        </div>
+      </div>
+    </>
   );
 }
 

@@ -14,16 +14,16 @@ import { Link } from "react-router";
 
 export default function Products() {
   return (
-    <main>
+    <section>
       <header className="p-4 text-center">
         <h1 className="text-2xl text-slate-300">Product Examples</h1>
       </header>
 
-      <div className="grid md:grid-cols-2 gap-4 m-2">
+      <div className="grid md:grid-cols-2 gap-4 m-2 min-w-sm">
         {/* iterate here */}
 
         {products.map((product) => (
-          <Card>
+          <Card className="">
             <CardHeader>
               <CardTitle>{product.title}</CardTitle>
               <CardDescription>{product.intro}</CardDescription>
@@ -51,6 +51,6 @@ export default function Products() {
           </Card>
         ))}
       </div>
-    </main>
+    </section>
   );
 }

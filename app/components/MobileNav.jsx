@@ -32,7 +32,7 @@ export default function MobileNav() {
     }
   }
   return (
-    <main class="sort-out">
+    <main>
       <div className="mobile w-[100%] flex justify-between">
         <NavLink to="/" className="logo" onClick={handleMenu}>
           {/* <img
@@ -65,6 +65,11 @@ export default function MobileNav() {
                   <li>
                     <NavLink to="/about">
                       <DrawerClose>About</DrawerClose>
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/contact">
+                      <DrawerClose>Contact</DrawerClose>
                     </NavLink>
                   </li>
                   <li>
