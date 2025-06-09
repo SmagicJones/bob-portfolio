@@ -15,6 +15,7 @@ import { Toaster } from "sonner";
 import type { Route } from "./+types/root";
 import "./app.css";
 import "./styles/custom.css";
+import DarkModeToggle from "./components/DarkModeToggle";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -39,6 +40,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        <div className="p-4">
+          <DarkModeToggle />
+        </div>
+
         {children}
         <Toaster />
         <ScrollRestoration />
