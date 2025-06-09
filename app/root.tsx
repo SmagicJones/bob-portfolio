@@ -10,6 +10,8 @@ import {
 import DesktopNav from "./components/DesktopNav";
 import MobileNav from "./components/MobileNav";
 
+import { Toaster } from "sonner";
+
 import type { Route } from "./+types/root";
 import "./app.css";
 import "./styles/custom.css";
@@ -38,6 +40,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
+        <Toaster />
         <ScrollRestoration />
         <Scripts />
       </body>

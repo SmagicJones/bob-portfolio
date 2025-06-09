@@ -1,34 +1,92 @@
-import { Form, type ActionFunctionArgs } from "react-router";
+import { Form, type ActionFunctionArgs, useNavigate } from "react-router";
 import { useRef } from "react";
 import nodemailer from "nodemailer";
 
 import { Button } from "~/components/ui/button";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from "~/components/ui/card";
+
+import { Label } from "~/components/ui/label";
+import { Input } from "~/components/ui/input";
+import { Textarea } from "~/components/ui/textarea";
+
+import { toast } from "sonner";
 
 export default function Contact() {
+  const navigate = useNavigate();
   const formRef = useRef<HTMLFormElement>(null);
   if (formRef.current) {
     formRef.current.reset();
   }
 
   return (
-    <main>
-      <h1 className="text-center text-2xl p-4">Contact Me</h1>
-      <div className="flex items-center justify-center">
-        <Form
-          method="post"
-          ref={formRef}
-          className="grid md:grid-cols2 gap-4 w-[300px] p-4 bg-slate-300 rounded text-slate-900"
-        >
-          <input type="text" name="name" required placeholder="Your name" />
-          <input type="email" name="email" required placeholder="Your Email" />
-          <textarea
-            name="message"
-            required
-            placeholder="Your message"
-          ></textarea>
-          <Button>Send</Button>
-        </Form>
-      </div>
+    <main className="m-4 p-4 flex justify-center items-center">
+      <Card className="w-full max-w-sm">
+        <CardHeader>
+          <CardTitle>Send me a message</CardTitle>
+          <CardDescription>Get in touch with the form below</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Form id="contact-form" method="post" ref={formRef}>
+            <div className="flex flex-col gap-6">
+              <div className="grid gap-2">
+                <Label htmlFor="email">name</Label>
+                <Input
+                  id="name"
+                  type="text"
+                  name="name"
+                  placeholder="e.g. Joe Bloggs"
+                  required
+                />
+              </div>
+              <div className="grid gap-2">
+                <div className="flex items-center">
+                  <Label htmlFor="email">email</Label>
+                </div>
+                <Input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="e.g. joe@bloggs.com"
+                  required
+                />
+              </div>
+              <div className="grid gap-2">
+                <label htmlFor="message">message</label>
+                <Textarea
+                  name="message"
+                  required
+                  placeholder="e.g. I really love your website..."
+                ></Textarea>
+              </div>
+            </div>
+          </Form>
+        </CardContent>
+        <CardFooter className="flex-col gap-2">
+          <Button
+            type="submit"
+            form="contact-form"
+            className="w-full"
+            onClick={() =>
+              toast("Thank you for Submitting the message", {
+                description: "Someone will be back to you very soon",
+                action: {
+                  label: "home",
+                  onClick: () => navigate("/"),
+                },
+              })
+            }
+          >
+            Send
+          </Button>
+        </CardFooter>
+      </Card>
     </main>
   );
 }
