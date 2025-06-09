@@ -33,7 +33,21 @@ export default function Contact() {
           <CardDescription>Get in touch with the form below</CardDescription>
         </CardHeader>
         <CardContent>
-          <Form id="contact-form" method="post" ref={formRef}>
+          <Form
+            id="contact-form"
+            method="post"
+            ref={formRef}
+            onSubmit={() => {
+              toast("Thanks for the message!", {
+                description:
+                  "I look forward to reading it and getting back to you",
+                action: {
+                  label: "home",
+                  onClick: () => navigate("/"),
+                },
+              });
+            }}
+          >
             <div className="flex flex-col gap-6">
               <div className="grid gap-2">
                 <Label htmlFor="email">name</Label>
@@ -69,20 +83,7 @@ export default function Contact() {
           </Form>
         </CardContent>
         <CardFooter className="flex-col gap-2">
-          <Button
-            type="submit"
-            form="contact-form"
-            className="w-full"
-            onClick={() =>
-              toast("Thank you for Submitting the message", {
-                description: "Someone will be back to you very soon",
-                action: {
-                  label: "home",
-                  onClick: () => navigate("/"),
-                },
-              })
-            }
-          >
+          <Button type="submit" form="contact-form" className="w-full">
             Send
           </Button>
         </CardFooter>
