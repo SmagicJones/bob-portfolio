@@ -15,7 +15,7 @@ export default function Project({ loaderData }) {
   const project = loaderData;
 
   return (
-    <main>
+    <main className="m-2 p-2">
       <header className="p-4 text-center">
         <h1 className="text-2xl text-slate-300">{project.title}</h1>
       </header>
