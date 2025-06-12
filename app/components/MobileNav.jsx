@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { NavLink } from "react-router";
 
 import { MenuIcon, X, ChevronRight } from "lucide-react";
+import { Button } from "../components/ui/button";
 
 import {
   Drawer,
@@ -34,15 +35,12 @@ export default function MobileNav() {
   return (
     <main>
       <div className="mobile w-[100%] flex justify-between">
-        <NavLink to="/" className="logo" onClick={handleMenu}>
-          {/* <img
-            width="83.5"
-            height="48"
-            src="https://www.teamleyland.com/wp-content/themes/ilab/img/team-leyland-logo.png"
-          /> */}
-          {/* <div className="flex justify-center items-center">
-            <h1 className="text-2xl">Bob Holland</h1>
-          </div> */}
+        <NavLink
+          to="/"
+          className="flex justify-center items-center p-4"
+          onClick={handleMenu}
+        >
+          <h1 className="text-md hover:text-slate-800">Bob Holland</h1>
         </NavLink>
         <div className="p-4">
           <Drawer direction="right">
@@ -56,46 +54,66 @@ export default function MobileNav() {
                 </DrawerClose>
                 {/* <DrawerTitle>Menu</DrawerTitle>
             <DrawerDescription>Get to where you want to be</DrawerDescription> */}
-                <ul className="link-list">
+                <ul className="">
                   <li>
                     <NavLink to="/">
-                      <DrawerClose>Home</DrawerClose>
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/about">
-                      <DrawerClose>About</DrawerClose>
+                      <DrawerClose>
+                        <h3 className="text-2xl">Home</h3>
+                      </DrawerClose>
                     </NavLink>
                   </li>
                   <li>
                     <NavLink to="/contact">
-                      <DrawerClose>Contact</DrawerClose>
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/products">
-                      <DrawerClose>Products</DrawerClose>
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/projects">
-                      <DrawerClose>Projects</DrawerClose>
+                      <DrawerClose>
+                        <h3 className="text-2xl">Contact</h3>
+                      </DrawerClose>
                     </NavLink>
                   </li>
                   <li>
                     <Accordion type="single" collapsible>
                       <AccordionItem value="item-1">
-                        <AccordionTrigger>Links</AccordionTrigger>
+                        <AccordionTrigger>Products</AccordionTrigger>
                         <AccordionContent>
                           <ul>
                             <li>
-                              <NavLink to="/pages">
-                                <DrawerClose>Pages</DrawerClose>
+                              <NavLink to="/products">
+                                <DrawerClose>All Examples</DrawerClose>
                               </NavLink>
                             </li>
                             <li>
-                              <NavLink to="/">
-                                <DrawerClose>Home</DrawerClose>
+                              <NavLink to="/products/ultimaker-s8">
+                                <DrawerClose>UltiMaker S8</DrawerClose>
+                              </NavLink>
+                            </li>
+                            <li>
+                              <NavLink to="/products/einscan-libre">
+                                <DrawerClose>EinScan Libre Scanner</DrawerClose>
+                              </NavLink>
+                            </li>
+                          </ul>
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
+                  </li>
+                  <li>
+                    <Accordion type="single" collapsible>
+                      <AccordionItem value="item-1">
+                        <AccordionTrigger>Projects</AccordionTrigger>
+                        <AccordionContent>
+                          <ul>
+                            <li>
+                              <NavLink to="/projects">
+                                <DrawerClose>All Projects</DrawerClose>
+                              </NavLink>
+                            </li>
+                            <li>
+                              <NavLink to="/projects/mongo-remix-movies">
+                                <DrawerClose>MongoDB & Remix</DrawerClose>
+                              </NavLink>
+                            </li>
+                            <li>
+                              <NavLink to="/products/darwen-masters-swimming">
+                                <DrawerClose>Charity Website Build</DrawerClose>
                               </NavLink>
                             </li>
                           </ul>
@@ -106,38 +124,15 @@ export default function MobileNav() {
                 </ul>
               </DrawerHeader>
 
-              <DrawerFooter>{/* <Button>Submit</Button> */}</DrawerFooter>
+              <DrawerFooter>
+                <NavLink to="/contact">
+                  <Button>Get in Touch</Button>
+                </NavLink>
+              </DrawerFooter>
             </DrawerContent>
           </Drawer>
         </div>
       </div>
-      <ul className={`mobile-options ${menuOpen ? "open" : "close"}`}>
-        <li>
-          <NavLink to="/pages" onClick={handleMenu}>
-            Pages
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/posts" onClick={handleMenu}>
-            Posts
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/contact" onClick={handleMenu}>
-            Contact
-          </NavLink>
-        </li>
-        <li className="details-wrapper">
-          <NavLink to="/vehicles" onClick={handleMenu}>
-            Vehicles
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/addpost" onClick={handleMenu}>
-            Make a Post
-          </NavLink>
-        </li>
-      </ul>
     </main>
   );
 }

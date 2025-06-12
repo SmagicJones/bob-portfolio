@@ -40,10 +40,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        <DesktopNav />
+        <MobileNav />
         <div className="p-4">
           <DarkModeToggle />
         </div>
-
         {children}
         <Toaster />
         <ScrollRestoration />
@@ -54,17 +55,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return (
-    <>
-      <div className="w-[100%]">
-        <DesktopNav />
-        <MobileNav />
-        <div>
-          <Outlet />
-        </div>
-      </div>
-    </>
-  );
+  return <Outlet />;
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {

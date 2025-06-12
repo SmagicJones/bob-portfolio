@@ -1,3 +1,7 @@
+body {
+  height: 100%;
+}
+
 .mobile {
   display: none;
 }
@@ -8,7 +12,6 @@
 
 .mobile-options {
   transition: 1000ms;
-  background: #eee;
 }
 
 .open {

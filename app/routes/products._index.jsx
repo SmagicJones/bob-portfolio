@@ -16,21 +16,27 @@ export default function Products() {
   return (
     <section className="m-2 p-2">
       <header className="p-4 text-center">
-        <h1 className="text-2xl text-slate-300">Product Examples</h1>
+        <h1 className="text-2xl">Product Examples</h1>
       </header>
 
-      <div className="grid md:grid-cols-2 gap-4 m-2 min-w-sm">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2  gap-4 m-2">
         {/* iterate here */}
 
         {products.map((product) => (
-          <Card className="">
+          <Card className="w">
             <CardHeader>
               <CardTitle>{product.title}</CardTitle>
               <CardDescription>{product.intro}</CardDescription>
             </CardHeader>
             <CardContent>
               <p>{product.comment}</p>
-              <img src={product.img_url} alt={product.img_alt} />
+              <div className="flex-justify-center items-center p-4">
+                <img
+                  src={product.img_url}
+                  alt={product.img_alt}
+                  className="rounded"
+                />
+              </div>
             </CardContent>
             <CardFooter>
               {/* <Link to={`/product/${product.slug}`}>
