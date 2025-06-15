@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 import { projects } from "../data/projects";
 
 import {
@@ -26,13 +28,21 @@ export default function Project({ loaderData }) {
             <CardDescription>{project.subtitle}</CardDescription>
           </CardHeader>
           <CardContent>
+            <p>{project.short_content}</p>
             <p>{project.long_content}</p>
+            <div className="flex justify-center gap-4 p-4">
+              <Link to={`/projects/${project.slug}`}>
+                <Button>Learn More</Button>
+              </Link>
+              <Link to={project.hosted_link} target="_blank">
+                <Button>Hosted Project</Button>
+              </Link>
+              <Link to={project.github_link} target="_blank">
+                <Button>Github Repository</Button>
+              </Link>
+            </div>
           </CardContent>
-          <CardFooter>
-            {/* <Link to={`/projects/${project.slug}`}>
-            <Button>Learn More</Button>
-          </Link> */}
-          </CardFooter>
+          <CardFooter className="grid grid-cols-1 gap-4 p-4"></CardFooter>
         </Card>
       </section>
     </main>
@@ -41,8 +51,6 @@ export default function Project({ loaderData }) {
 
 export async function loader({ params }) {
   const slug = await params.slug;
-
   const project = await projects.find((item) => item.slug === slug);
-  console.log(project);
   return project;
 }

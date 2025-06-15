@@ -26,7 +26,7 @@ export default function Contact() {
   }
 
   return (
-    <main className="flex justify-center items-center h-screen">
+    <main className="flex justify-center mt-2">
       <section className="grid grid-cols-1 gap-4 w-[90%] md:w-[70%] lg:w-[40%]">
         <Card className="">
           <CardHeader>
