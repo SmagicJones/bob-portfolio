@@ -30,9 +30,7 @@ export default function DarkModeToggle(): JSX.Element {
         onClick={() => setIsDark(!isDark)}
         aria-label="Toggle dark mode"
       ></Switch>
-      <Label htmlFor="mode-toggle">
-        {isDark ? "☀️ Light Mode" : "🌙 Dark Mode"}
-      </Label>
+      <Label htmlFor="mode-toggle">{isDark ? "Light Mode" : "Dark Mode"}</Label>
     </div>
   );
 }

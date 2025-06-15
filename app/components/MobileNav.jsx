@@ -56,38 +56,48 @@ export default function MobileNav() {
             <DrawerDescription>Get to where you want to be</DrawerDescription> */}
                 <ul className="">
                   <li>
-                    <NavLink to="/">
-                      <DrawerClose>
-                        <h3 className="text-2xl">Home</h3>
-                      </DrawerClose>
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/contact">
-                      <DrawerClose>
-                        <h3 className="text-2xl">Contact</h3>
-                      </DrawerClose>
-                    </NavLink>
+                    <Accordion type="single" collapsible>
+                      <AccordionItem value="item-1">
+                        <AccordionTrigger>About</AccordionTrigger>
+                        <AccordionContent>
+                          <ul>
+                            <li>
+                              <NavLink to="/contact">
+                                <DrawerClose>Contact</DrawerClose>
+                              </NavLink>
+                            </li>
+                            <li>
+                              <NavLink
+                                to="https://github.com/smagicjones"
+                                target="_blank"
+                              >
+                                <DrawerClose>Connect on Github</DrawerClose>
+                              </NavLink>
+                            </li>
+                          </ul>
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
                   </li>
                   <li>
                     <Accordion type="single" collapsible>
                       <AccordionItem value="item-1">
-                        <AccordionTrigger>Products</AccordionTrigger>
+                        <AccordionTrigger>Work</AccordionTrigger>
                         <AccordionContent>
                           <ul>
                             <li>
-                              <NavLink to="/products">
+                              <NavLink to="/work">
                                 <DrawerClose>All Examples</DrawerClose>
                               </NavLink>
                             </li>
                             <li>
-                              <NavLink to="/products/ultimaker-s8">
-                                <DrawerClose>UltiMaker S8</DrawerClose>
+                              <NavLink to="/products">
+                                <DrawerClose>Products</DrawerClose>
                               </NavLink>
                             </li>
                             <li>
-                              <NavLink to="/products/einscan-libre">
-                                <DrawerClose>EinScan Libre Scanner</DrawerClose>
+                              <NavLink to="/landingpages">
+                                <DrawerClose>Landing pages</DrawerClose>
                               </NavLink>
                             </li>
                           </ul>
@@ -123,12 +133,6 @@ export default function MobileNav() {
                   </li>
                 </ul>
               </DrawerHeader>
-
-              <DrawerFooter>
-                <NavLink to="/contact">
-                  <Button>Get in Touch</Button>
-                </NavLink>
-              </DrawerFooter>
             </DrawerContent>
           </Drawer>
         </div>

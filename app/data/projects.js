@@ -23,4 +23,15 @@ export const projects = [
     github_link: "https://github.com/SmagicJones/DMSC",
     slug: "darwen-masters-swimming",
   },
+  {
+    id: 2,
+    title: "NASA Picture of the Day",
+    subtitle: "A wonderful image from somewhere in the galaxy",
+    short_content: "Simple one page app using React-router V7",
+    long_content:
+      "A more detailed hd image is available to download via the hd image link",
+    hosted_link: "https://expandedhorizons.netlify.app",
+    github_link: "https://github.com/SmagicJones/nasa-picture-of-the-day",
+    slug: "expanded-horizons",
+  },
 ];

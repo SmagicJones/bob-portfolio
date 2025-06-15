@@ -16,7 +16,7 @@ export default function Projects() {
   return (
     <main className="m-2 p-2 h-[100%]">
       <header className="p-4 text-center">
-        <h1 className="text-2xl text-slate-300">Projects</h1>
+        <h1 className="text-2xl">Projects</h1>
       </header>
 
       <div className="grid md:grid-cols-2 gap-4 m-2">

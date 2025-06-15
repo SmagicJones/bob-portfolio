@@ -15,9 +15,9 @@ export default function Project({ loaderData }) {
   const project = loaderData;
 
   return (
-    <main className="m-2 p-2">
+    <main className="m-2 p-2 h-[100%]">
       <header className="p-4 text-center">
-        <h1 className="text-2xl text-slate-300">{project.title}</h1>
+        <h1 className="text-2xl">{project.title}</h1>
       </header>
       <section className="m-2">
         <Card>

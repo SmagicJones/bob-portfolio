@@ -74,7 +74,7 @@ export default function DesktopNav() {
                 </li>
                 <li>
                   <NavLink
-                    to="https://github.com/smagicjones"
+                    to="/landingpages"
                     className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                   >
                     <div className="text-sm font-medium leading-none">
@@ -85,7 +85,7 @@ export default function DesktopNav() {
                     </p>
                   </NavLink>
                 </li>
-                <li>
+                {/* <li>
                   <NavLink
                     to="/projects"
                     className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
@@ -110,7 +110,7 @@ export default function DesktopNav() {
                       I'm always there for music
                     </p>
                   </NavLink>
-                </li>
+                </li> */}
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
