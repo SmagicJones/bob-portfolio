@@ -9,6 +9,16 @@ import {
 
 import bobCoffee from "../images/coffee-bob.jpg";
 
+import { type MetaFunction } from "react-router";
+
+export const meta: MetaFunction = () => [
+  { title: "Bob Holland Software Developer" },
+  {
+    name: "description",
+    content: "Bob Holland's Portfolio Site, Software Developer",
+  },
+];
+
 export default function Home() {
   return (
     <main>

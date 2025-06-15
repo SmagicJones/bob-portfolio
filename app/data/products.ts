@@ -1,4 +1,16 @@
-export const products = [
+export interface Product {
+  id: number;
+  title: string;
+  intro: string;
+  img_url: string;
+  img_alt: string;
+  comment: string;
+  slug: string;
+  link: string;
+  comparison_link: string;
+}
+
+export const products: Product[] = [
   {
     id: 0,
     title: "UltiMaker S8",

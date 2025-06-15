@@ -18,6 +18,16 @@ import { Textarea } from "~/components/ui/textarea";
 
 import { toast } from "sonner";
 
+import { type MetaFunction } from "react-router";
+
+export const meta: MetaFunction = () => [
+  { title: "Get in Touch" },
+  {
+    name: "description",
+    content: "Send me a message and I will get straight back to you",
+  },
+];
+
 export default function Contact() {
   const navigate = useNavigate();
   const formRef = useRef<HTMLFormElement>(null);
