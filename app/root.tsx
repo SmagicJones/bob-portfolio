@@ -42,9 +42,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body>
         <DesktopNav />
         <MobileNav />
-        {/* <div className="p-4">
+        <div className="p-4">
           <DarkModeToggle />
-        </div> */}
+        </div>
         {children}
         <Toaster />
         <ScrollRestoration />
@@ -55,7 +55,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <main className="min-h-screen">
+      <Outlet />
+    </main>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
