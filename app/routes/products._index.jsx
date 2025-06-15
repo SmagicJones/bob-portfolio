@@ -14,16 +14,16 @@ import { Link } from "react-router";
 
 export default function Products() {
   return (
-    <section className="m-2 p-2 h-screen">
+    <section className="pb-4 h-full">
       <header className="p-4 text-center">
         <h1 className="text-2xl">Product Examples</h1>
       </header>
 
-      <div className="grid lg:grid-cols-3 md:grid-cols-2  gap-4 m-2">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 m-2">
         {/* iterate here */}
 
         {products.map((product) => (
-          <Card className="w">
+          <Card>
             <CardHeader>
               <CardTitle>{product.title}</CardTitle>
               <CardDescription>{product.intro}</CardDescription>
@@ -38,19 +38,11 @@ export default function Products() {
                 />
               </div> */}
             </CardContent>
-            <CardFooter>
-              {/* <Link to={`/product/${product.slug}`}>
-                <Button>Find Out More</Button>
-              </Link> */}
-
-              <Link to={product.link} target="_blank" className="pr-2">
+            <CardFooter className="grid grid-cols-1 gap-4">
+              <Link to={product.link} target="_blank">
                 <Button>View My Build</Button>
               </Link>
-              <Link
-                to={product.comparison_link}
-                target="_blank"
-                className="pl-2"
-              >
+              <Link to={product.comparison_link} target="_blank">
                 <Button>View Manufacturer Page</Button>
               </Link>
             </CardFooter>
