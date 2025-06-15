@@ -30,13 +30,13 @@ export default function Products() {
             </CardHeader>
             <CardContent>
               <p>{product.comment}</p>
-              {/* <div className="flex-justify-center items-center p-4 m-2">
+              <div className="flex-justify-center items-center p-4 m-2">
                 <img
                   src={product.img_url}
                   alt={product.img_alt}
                   className="rounded"
                 />
-              </div> */}
+              </div>
             </CardContent>
             <CardFooter className="grid grid-cols-1 gap-4">
               <Link to={product.link} target="_blank">
