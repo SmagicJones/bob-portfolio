@@ -1,13 +1,48 @@
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "../components/ui/card";
+
+import bobCoffee from "../images/coffee-bob.jpg";
+
 export default function Home() {
   return (
-    <section className="pt-4 h-screen">
-      <div className="grid md:grid-cols-2 gap-4 m-4">
-        <div className="rounded p-4">
-          <h1 className="text-4xl">Bob Holland</h1>
-          <h2 className="text-2xl">Software Developer</h2>
-          <p>Getting better all the time</p>
-        </div>
-      </div>
-    </section>
+    <main>
+      <section className="grid md:grid-cols-2 gap-4 m-2">
+        <Card>
+          <CardHeader>
+            <CardTitle>Bob Holland</CardTitle>
+            <CardDescription>Software Developer</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p>
+              Welcome to my portfolio site - This has been built with React
+              Router v7, tailwind, and shadcn. Here is a space where you can see
+              some examples of things I have worked on and what I am working on.
+            </p>
+            <p className="pt-2">
+              Here's a list of things that I believe a bring to the table in in
+              development team:
+            </p>
+            <ul>
+              <li>Determination</li>
+              <li>Creativity</li>
+            </ul>
+          </CardContent>
+          {/* <CardFooter>
+            <p>Now and into the future</p>
+          </CardFooter> */}
+        </Card>
+        <Card>
+          <CardContent>
+            <img className="rounded" src={bobCoffee} alt="I like coffee too!" />
+          </CardContent>
+        </Card>
+      </section>
+    </main>
   );
 }
