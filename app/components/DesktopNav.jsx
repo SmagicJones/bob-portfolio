@@ -54,7 +54,7 @@ export default function DesktopNav() {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuTrigger>
-              <NavLink to="/about">Work</NavLink>
+              <NavLink to="/work">Work</NavLink>
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               {/* <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]"> */}
@@ -116,7 +116,7 @@ export default function DesktopNav() {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuTrigger>
-              <NavLink to="/about">Projects</NavLink>
+              <NavLink to="/projects">Projects</NavLink>
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               {/* <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]"> */}

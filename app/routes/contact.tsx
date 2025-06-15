@@ -26,68 +26,70 @@ export default function Contact() {
   }
 
   return (
-    <main className="m-4 p-4 flex justify-center items-center">
-      <Card className="w-full max-w-sm">
-        <CardHeader>
-          <CardTitle>Send me a message</CardTitle>
-          <CardDescription>Get in touch with the form below</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <Form
-            id="contact-form"
-            method="post"
-            ref={formRef}
-            onSubmit={() => {
-              toast("Thanks for the message!", {
-                description:
-                  "I look forward to reading it and getting back to you",
-                action: {
-                  label: "home",
-                  onClick: () => navigate("/"),
-                },
-              });
-            }}
-          >
-            <div className="flex flex-col gap-6">
-              <div className="grid gap-2">
-                <Label htmlFor="email">name</Label>
-                <Input
-                  id="name"
-                  type="text"
-                  name="name"
-                  placeholder="e.g. Joe Bloggs"
-                  required
-                />
-              </div>
-              <div className="grid gap-2">
-                <div className="flex items-center">
-                  <Label htmlFor="email">email</Label>
+    <main className="flex justify-center items-center h-screen">
+      <section className="grid grid-cols-1 gap-4 w-[90%] md:w-[70%] lg:w-[40%]">
+        <Card className="">
+          <CardHeader>
+            <CardTitle>Send me a message</CardTitle>
+            <CardDescription>Get in touch with the form below</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Form
+              id="contact-form"
+              method="post"
+              ref={formRef}
+              onSubmit={() => {
+                toast("Thanks for the message!", {
+                  description:
+                    "I look forward to reading it and getting back to you",
+                  action: {
+                    label: "home",
+                    onClick: () => navigate("/"),
+                  },
+                });
+              }}
+            >
+              <div className="flex flex-col gap-6">
+                <div className="grid gap-2">
+                  <Label htmlFor="email">name</Label>
+                  <Input
+                    id="name"
+                    type="text"
+                    name="name"
+                    placeholder="e.g. Joe Bloggs"
+                    required
+                  />
                 </div>
-                <Input
-                  id="email"
-                  type="email"
-                  name="email"
-                  placeholder="e.g. joe@bloggs.com"
-                  required
-                />
+                <div className="grid gap-2">
+                  <div className="flex items-center">
+                    <Label htmlFor="email">email</Label>
+                  </div>
+                  <Input
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="e.g. joe@bloggs.com"
+                    required
+                  />
+                </div>
+                <div className="grid gap-2">
+                  <label htmlFor="message">message</label>
+                  <Textarea
+                    name="message"
+                    required
+                    placeholder="e.g. I really love your website..."
+                  ></Textarea>
+                </div>
               </div>
-              <div className="grid gap-2">
-                <label htmlFor="message">message</label>
-                <Textarea
-                  name="message"
-                  required
-                  placeholder="e.g. I really love your website..."
-                ></Textarea>
-              </div>
-            </div>
-          </Form>
-        </CardContent>
-        <CardFooter className="flex-col gap-2">
-          <Button type="submit" form="contact-form" className="w-full">
-            Send
-          </Button>
-        </CardFooter>
-      </Card>
+            </Form>
+          </CardContent>
+          <CardFooter className="flex-col gap-2">
+            <Button type="submit" form="contact-form" className="w-full">
+              Send
+            </Button>
+          </CardFooter>
+        </Card>
+      </section>
     </main>
   );
 }

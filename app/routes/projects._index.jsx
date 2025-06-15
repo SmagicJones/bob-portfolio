@@ -14,7 +14,7 @@ import { Link } from "react-router";
 
 export default function Projects() {
   return (
-    <main className="m-2 p-2">
+    <main className="m-2 p-2 h-screen">
       <header className="p-4 text-center">
         <h1 className="text-2xl text-slate-300">Projects</h1>
       </header>

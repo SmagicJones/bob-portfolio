@@ -14,7 +14,7 @@ import { Link } from "react-router";
 
 export default function Products() {
   return (
-    <section className="m-2 p-2">
+    <section className="m-2 p-2 h-screen">
       <header className="p-4 text-center">
         <h1 className="text-2xl">Product Examples</h1>
       </header>
@@ -30,13 +30,13 @@ export default function Products() {
             </CardHeader>
             <CardContent>
               <p>{product.comment}</p>
-              <div className="flex-justify-center items-center p-4">
+              {/* <div className="flex-justify-center items-center p-4 m-2">
                 <img
                   src={product.img_url}
                   alt={product.img_alt}
                   className="rounded"
                 />
-              </div>
+              </div> */}
             </CardContent>
             <CardFooter>
               {/* <Link to={`/product/${product.slug}`}>
