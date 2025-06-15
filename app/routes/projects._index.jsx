@@ -14,7 +14,7 @@ import { Link } from "react-router";
 
 export default function Projects() {
   return (
-    <main className="m-2 p-2 h-screen">
+    <main className="m-2 p-2 h-[100%]">
       <header className="p-4 text-center">
         <h1 className="text-2xl text-slate-300">Projects</h1>
       </header>
@@ -31,15 +31,11 @@ export default function Projects() {
             <CardContent>
               <p>{project.short_content}</p>
             </CardContent>
-            <CardFooter className="">
+            <CardFooter className="grid grid-cols-1 gap-4 p-4">
               <Link to={`/projects/${project.slug}`}>
                 <Button>Learn More</Button>
               </Link>
-              <Link
-                to={project.hosted_link}
-                target="_blank"
-                className="pl-2 pr-2"
-              >
+              <Link to={project.hosted_link} target="_blank">
                 <Button>Hosted Project</Button>
               </Link>
               <Link to={project.github_link} target="_blank">
