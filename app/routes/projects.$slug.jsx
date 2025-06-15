@@ -13,6 +13,8 @@ import {
 
 import { Button } from "../components/ui/button";
 
+import { bobCoffee } from "../images/coffee-bob.jpg";
+
 export default function Project({ loaderData }) {
   const project = loaderData;
 
@@ -30,15 +32,20 @@ export default function Project({ loaderData }) {
           <CardContent>
             <p>{project.short_content}</p>
             <p>{project.long_content}</p>
-            <div className="flex justify-center gap-4 p-4">
-              <Link to={`/projects/${project.slug}`}>
-                <Button>Learn More</Button>
+            <div className="flex flex-row gap-4 mt-2">
+              <Link
+                to={project.hosted_link}
+                target="_blank"
+                className="hover:font-bold"
+              >
+                Hosted Project
               </Link>
-              <Link to={project.hosted_link} target="_blank">
-                <Button>Hosted Project</Button>
-              </Link>
-              <Link to={project.github_link} target="_blank">
-                <Button>Github Repository</Button>
+              <Link
+                to={project.github_link}
+                target="_blank"
+                className="hover:font-bold"
+              >
+                Github
               </Link>
             </div>
           </CardContent>
