@@ -32,14 +32,32 @@ export default function Projects() {
               <p>{project.short_content}</p>
             </CardContent>
             <CardFooter className="grid grid-cols-1 gap-4 p-4">
-              <Link to={`/projects/${project.slug}`}>
-                <Button>Learn More</Button>
+              <Link
+                to={project.slug}
+                target="_blank"
+                className="flex justify-center items-center"
+              >
+                <Button className="w-[100%] md:w-[70%] lg:w-[50%]">
+                  More detail
+                </Button>
               </Link>
-              <Link to={`${project.hosted_link}`} target="_blank">
-                <Button>Hosted Project</Button>
+              <Link
+                to={`${project.hosted_link}`}
+                target="_blank"
+                className="flex justify-center items-center"
+              >
+                <Button className="w-[100%] md:w-[70%] lg:w-[50%]">
+                  Hosted Project
+                </Button>
               </Link>
-              <Link to={`${project.github_link}`} target="_blank">
-                <Button>Github Repository</Button>
+              <Link
+                to={`${project.github_link}`}
+                target="_blank"
+                className="flex justify-center items-center"
+              >
+                <Button className="w-[100%] md:w-[70%] lg:w-[50%]">
+                  Github Repository
+                </Button>
               </Link>
             </CardFooter>
           </Card>

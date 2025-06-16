@@ -1,12 +1,12 @@
 export interface Project {
   id: number;
-  title: String;
-  subtitle: String;
-  short_content: String;
-  long_content: String;
-  hosted_link: String;
-  github_link: String;
-  slug: String;
+  title: string;
+  subtitle: string;
+  short_content: string;
+  long_content: string;
+  hosted_link: string;
+  github_link: string;
+  slug: string;
 }
 
 export const projects: Project[] = [

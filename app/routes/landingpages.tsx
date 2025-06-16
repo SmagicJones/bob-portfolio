@@ -9,10 +9,10 @@ import {
 
 import { Button } from "../components/ui/button";
 
-import { landingPages } from "../data/landingpages";
+import { landingPages, type LandingPage } from "../data/landingpages";
 import { Link } from "react-router";
 
-export default function Products() {
+export default function LandingPages() {
   return (
     <section className="pb-4 h-full">
       <header className="p-4 text-center">
@@ -22,7 +22,7 @@ export default function Products() {
       <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 m-2">
         {/* iterate here */}
 
-        {landingPages.map((page) => (
+        {landingPages.map((page: LandingPage) => (
           <Card>
             <CardHeader>
               <CardTitle>{page.title}</CardTitle>
@@ -39,8 +39,14 @@ export default function Products() {
               </div>
             </CardContent>
             <CardFooter className="grid grid-cols-1 gap-4">
-              <Link to={page.link} target="_blank">
-                <Button>View My Build</Button>
+              <Link
+                to={page.link}
+                target="_blank"
+                className="flex justify-center items-center"
+              >
+                <Button className="w-[100%] md:w-[70%] lg:w-[50%]">
+                  View My Build
+                </Button>
               </Link>
             </CardFooter>
           </Card>

@@ -1,4 +1,17 @@
-export const landingPages = [
+import type { StringToBoolean } from "class-variance-authority/types";
+
+export interface LandingPage {
+  id: number;
+  title: string;
+  intro: string;
+  img_url: string;
+  img_alt: string;
+  comment: string;
+  slug: string;
+  link: string;
+}
+
+export const landingPages: LandingPage[] = [
   {
     id: 0,
     title: "Bambu Range",

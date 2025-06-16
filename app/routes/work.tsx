@@ -9,8 +9,8 @@ import {
 
 import { Button } from "../components/ui/button";
 
-import { products } from "../data/products";
-import { landingPages } from "../data/landingpages";
+import { products, type Product } from "../data/products";
+import { landingPages, type LandingPage } from "../data/landingpages";
 import { Link } from "react-router";
 
 export default function Work() {
@@ -24,7 +24,7 @@ export default function Work() {
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 m-2">
           {/* iterate here */}
 
-          {products.map((product) => (
+          {products.map((product: Product) => (
             <Card>
               <CardHeader>
                 <CardTitle>{product.title}</CardTitle>
@@ -41,11 +41,23 @@ export default function Work() {
                 </div>
               </CardContent>
               <CardFooter className="grid grid-cols-1 gap-4">
-                <Link to={product.link} target="_blank">
-                  <Button>View My Build</Button>
+                <Link
+                  to={product.link}
+                  target="_blank"
+                  className="flex justify-center items-center"
+                >
+                  <Button className="w-[100%] md:w-[70%] lg:w-[50%]">
+                    View My Build
+                  </Button>
                 </Link>
-                <Link to={product.comparison_link} target="_blank">
-                  <Button>View Manufacturer Page</Button>
+                <Link
+                  to={product.comparison_link}
+                  target="_blank"
+                  className="flex justify-center items-center"
+                >
+                  <Button className="w-[100%] md:w-[70%] lg:w-[50%]">
+                    View Manufacturer Page
+                  </Button>
                 </Link>
               </CardFooter>
             </Card>
@@ -60,7 +72,7 @@ export default function Work() {
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 m-2">
           {/* iterate here */}
 
-          {landingPages.map((page) => (
+          {landingPages.map((page: LandingPage) => (
             <Card>
               <CardHeader>
                 <CardTitle>{page.title}</CardTitle>
@@ -77,8 +89,14 @@ export default function Work() {
                 </div>
               </CardContent>
               <CardFooter className="grid grid-cols-1 gap-4">
-                <Link to={page.link} target="_blank">
-                  <Button>View My Build</Button>
+                <Link
+                  to={page.link}
+                  target="_blank"
+                  className="flex justify-center items-center"
+                >
+                  <Button className="w-[100%] md:w-[70%] lg:w-[50%]">
+                    View My Build
+                  </Button>
                 </Link>
               </CardFooter>
             </Card>

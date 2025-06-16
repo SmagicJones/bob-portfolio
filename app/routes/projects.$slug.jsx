@@ -21,6 +21,9 @@ export default function Project({ loaderData }) {
   return (
     <main className="m-2 p-2 h-[100%]">
       <header className="p-4 text-center">
+        <Link to="/projects" className="flex justify-center items-center p-4">
+          <Button>All Projects</Button>
+        </Link>
         <h1 className="text-2xl">{project.title}</h1>
       </header>
       <section className="m-2">

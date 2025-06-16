@@ -11,6 +11,8 @@ import {
   NavigationMenuViewport,
 } from "./ui/navigation-menu";
 
+import { projects, type Project } from "~/data/projects";
+
 export default function DesktopNav() {
   return (
     <div className="desk w-[100vw] flex justify-center items-center">
@@ -85,32 +87,6 @@ export default function DesktopNav() {
                     </p>
                   </NavLink>
                 </li>
-                {/* <li>
-                  <NavLink
-                    to="/projects"
-                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                  >
-                    <div className="text-sm font-medium leading-none">
-                      Wider Changes
-                    </div>
-                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                      More Global site changes
-                    </p>
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/music"
-                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                  >
-                    <div className="text-sm font-medium leading-none">
-                      Music and Music Lessons
-                    </div>
-                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                      I'm always there for music
-                    </p>
-                  </NavLink>
-                </li> */}
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
@@ -118,37 +94,26 @@ export default function DesktopNav() {
             <NavigationMenuTrigger>
               <NavLink to="/projects">Projects</NavLink>
             </NavigationMenuTrigger>
-            <NavigationMenuContent>
-              {/* <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]"> */}
+
+            {/* <NavigationMenuContent>
               <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                <li>
-                  <NavLink
-                    to="/projects/mongo-remix-movies"
-                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                  >
-                    <div className="text-sm font-medium leading-none">
-                      MongoDB and Remix
-                    </div>
-                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                      A link between mongoDB and Remix - using movies!
-                    </p>
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="projects/darwen-masters-swimming"
-                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                  >
-                    <div className="text-sm font-medium leading-none">
-                      Charity Website Build
-                    </div>
-                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                      A site I have built and host
-                    </p>
-                  </NavLink>
-                </li>
+                {projects.map((project: Project) => (
+                  <li key={project.id}>
+                    <NavLink
+                      to={project.slug}
+                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                    >
+                      <div className="text-sm font-medium leading-none">
+                        {project.title}
+                      </div>
+                      <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                        {project.subtitle}
+                      </p>
+                    </NavLink>
+                  </li>
+                ))}
               </ul>
-            </NavigationMenuContent>
+            </NavigationMenuContent> */}
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>

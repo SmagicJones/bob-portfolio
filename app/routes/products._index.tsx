@@ -49,11 +49,32 @@ export default function Products() {
               </div>
             </CardContent>
             <CardFooter className="grid grid-cols-1 gap-4">
-              <Link to={product.link} target="_blank">
-                <Button>View My Build</Button>
+              <Link
+                to={product.slug}
+                target="_blank"
+                className="flex justify-center items-center"
+              >
+                <Button className="w-[100%] md:w-[70%] lg:w-[50%]">
+                  More detail
+                </Button>
               </Link>
-              <Link to={product.comparison_link} target="_blank">
-                <Button>View Manufacturer Page</Button>
+              <Link
+                to={product.link}
+                target="_blank"
+                className="flex justify-center items-center"
+              >
+                <Button className="w-[100%] md:w-[70%] lg:w-[50%]">
+                  View My Build
+                </Button>
+              </Link>
+              <Link
+                to={product.comparison_link}
+                target="_blank"
+                className="flex justify-center items-center"
+              >
+                <Button className="w-[100%] md:w-[70%] lg:w-[50%]">
+                  View Manufacturer Page
+                </Button>
               </Link>
             </CardFooter>
           </Card>

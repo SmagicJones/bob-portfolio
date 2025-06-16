@@ -1,4 +1,5 @@
 import { products } from "../data/products";
+import { Link } from "react-router";
 
 import {
   Card,
@@ -17,6 +18,9 @@ export default function Product({ loaderData }) {
   return (
     <main className="m-2 p-2">
       <header className="p-4 text-center">
+        <Link to="/products" className="flex justify-center items-center p-4">
+          <Button>All Products</Button>
+        </Link>
         <h1 className="text-2xl">{product.title}</h1>
       </header>
       <section className="m-2">
