@@ -9,7 +9,7 @@ import {
 
 import { Button } from "../components/ui/button";
 
-import { projects } from "../data/projects";
+import { projects, type Project } from "../data/projects";
 import { Link } from "react-router";
 
 export default function Projects() {
@@ -22,7 +22,7 @@ export default function Projects() {
       <div className="grid md:grid-cols-2 gap-4 m-2">
         {/* iterate here */}
 
-        {projects.map((project) => (
+        {projects.map((project: Project) => (
           <Card>
             <CardHeader>
               <CardTitle>{project.title}</CardTitle>
@@ -35,10 +35,10 @@ export default function Projects() {
               <Link to={`/projects/${project.slug}`}>
                 <Button>Learn More</Button>
               </Link>
-              <Link to={project.hosted_link} target="_blank">
+              <Link to={`${project.hosted_link}`} target="_blank">
                 <Button>Hosted Project</Button>
               </Link>
-              <Link to={project.github_link} target="_blank">
+              <Link to={`${project.github_link}`} target="_blank">
                 <Button>Github Repository</Button>
               </Link>
             </CardFooter>

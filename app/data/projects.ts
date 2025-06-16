@@ -1,4 +1,15 @@
-export const projects = [
+export interface Project {
+  id: number;
+  title: String;
+  subtitle: String;
+  short_content: String;
+  long_content: String;
+  hosted_link: String;
+  github_link: String;
+  slug: String;
+}
+
+export const projects: Project[] = [
   {
     id: 0,
     title: "Movies with Remix and MongoDB",

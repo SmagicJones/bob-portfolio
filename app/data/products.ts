@@ -43,7 +43,7 @@ export const products: Product[] = [
       "https://www.shining3d.com/professional-solutions/all-in-one-3d-scanner/einscan-libre",
   },
   {
-    id: 1,
+    id: 2,
     title: "Bambu Lab H2D Laser Combo",
     intro: "Rethink Personal Manufacturing",
     img_url:
