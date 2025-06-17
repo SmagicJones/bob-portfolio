@@ -17,7 +17,7 @@ import type { Route } from "../+types/root";
 export default function Project() {
   const project = useLoaderData();
   return (
-    <main className="m-2 p-2 h-[100%]">
+    <main className="pb-4 h-full">
       <header className="p-4 text-center">
         <Link to="/projects" className="flex justify-center items-center p-4">
           <Button>All Projects</Button>

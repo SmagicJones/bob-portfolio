@@ -17,7 +17,7 @@ export default function Product() {
   const product = useLoaderData();
 
   return (
-    <main className="m-2 p-2">
+    <main className="pb-4 h-full">
       <header className="p-4 text-center">
         <Link to="/products" className="flex justify-center items-center p-4">
           <Button>All Products</Button>
