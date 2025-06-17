@@ -14,7 +14,7 @@ import { Link } from "react-router";
 
 export default function Projects() {
   return (
-    <main className="m-2 p-2 h-[100%]">
+    <main className="pb-4 h-full">
       <header className="p-4 text-center">
         <h1 className="text-2xl">Projects</h1>
       </header>
