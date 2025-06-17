@@ -12,6 +12,16 @@ import { Button } from "../components/ui/button";
 import { landingPages, type LandingPage } from "../data/landingpages";
 import { Link } from "react-router";
 
+import { type MetaFunction } from "react-router";
+
+export const meta: MetaFunction = () => [
+  { title: "Landing page builds" },
+  {
+    name: "description",
+    content: "Landing pages I have built",
+  },
+];
+
 export default function LandingPages() {
   return (
     <section className="pb-4 h-full">

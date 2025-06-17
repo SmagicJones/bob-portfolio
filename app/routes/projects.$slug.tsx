@@ -1,6 +1,6 @@
 import { Link, useLoaderData } from "react-router";
 
-import { projects } from "../data/projects";
+import { projects, type Project } from "../data/projects";
 
 import {
   Card,
@@ -13,6 +13,25 @@ import {
 
 import { Button } from "../components/ui/button";
 import type { Route } from "../+types/root";
+import { type MetaFunction } from "react-router";
+
+export const meta: MetaFunction = ({ data }) => {
+  const project = data as Project | undefined;
+  if (!project) {
+    return [
+      { title: "Bob Holland Project" },
+      {
+        name: "description",
+        content: "An exciting project I have worked on",
+      },
+    ];
+  }
+
+  return [
+    { title: project.title },
+    { name: "description", content: project.short_content },
+  ];
+};
 
 export default function Project() {
   const project = useLoaderData();

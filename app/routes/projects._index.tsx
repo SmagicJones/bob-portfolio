@@ -12,6 +12,16 @@ import { Button } from "../components/ui/button";
 import { projects, type Project } from "../data/projects";
 import { Link } from "react-router";
 
+import { type MetaFunction } from "react-router";
+
+export const meta: MetaFunction = () => [
+  { title: "Projects I have worked on" },
+  {
+    name: "description",
+    content: "Projects I have worked on please have a look around",
+  },
+];
+
 export default function Projects() {
   return (
     <main className="pb-4 h-full">

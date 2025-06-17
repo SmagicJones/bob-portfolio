@@ -1,4 +1,4 @@
-import { products } from "../data/products";
+import { products, type Product } from "../data/products";
 import { Link, useLoaderData } from "react-router";
 
 import {
@@ -12,6 +12,28 @@ import {
 
 import { Button } from "../components/ui/button";
 import type { Route } from "../+types/root";
+
+import { type MetaFunction } from "react-router";
+
+export const meta: MetaFunction = ({ data }) => {
+  const product = data as Product | undefined;
+  if (!product) {
+    return [
+      { title: "Bob Holland Product Build" },
+      {
+        name: "description",
+        content: "An exciting product page build",
+      },
+    ];
+  }
+  return [
+    { title: product.title },
+    {
+      name: "description",
+      content: product.comment,
+    },
+  ];
+};
 
 export default function Product() {
   const product = useLoaderData();
