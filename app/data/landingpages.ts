@@ -23,4 +23,28 @@ export const landingPages: LandingPage[] = [
     slug: "bambu-landing-page",
     link: "https://www.createeducation.com/bambu-range/",
   },
+  {
+    id: 1,
+    title: "Creality Range",
+    intro: "Landing page for Creality 3D Printers",
+    img_url:
+      "https://3dgbire.com/cdn/shop/files/a1feb250f5988665f46808469757d1d8_1008x_1080x_41185844-646a-4fd0-92e8-8a20c5a6113a_1512x.webp?v=1737560306",
+    img_alt: "Creality K2 Plus Combo 3D Printer",
+    comment:
+      "A Landing page for Creality - a new brand to the company -  in keeping with the rest of the site and produced with very few resources",
+    slug: "creality-landing-page",
+    link: "https://3dgbire.com/pages/creality",
+  },
+  {
+    id: 2,
+    title: "UltiMaker Range",
+    intro: "Landing page for UltiMaker 3D Printers",
+    img_url:
+      "https://www.createeducation.com/wp-content/uploads/2025/06/S6-Hero-optim-500x500.jpg",
+    img_alt: "UltiMaker S6 3D Printer",
+    comment:
+      "A Landing page for UltiMaker 3D Printers that also reflects the rest of the site",
+    slug: "ultimaker-landing-page",
+    link: "https://www.createeducation.com/ultimaker-range/",
+  },
 ];

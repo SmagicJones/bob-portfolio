@@ -1,3 +1,4 @@
+import { Button } from "~/components/ui/button";
 import {
   Card,
   CardContent,
@@ -9,7 +10,7 @@ import {
 
 import bobCoffee from "../images/coffee-bob.jpg";
 
-import { type MetaFunction } from "react-router";
+import { Link, type MetaFunction } from "react-router";
 
 export const meta: MetaFunction = () => [
   { title: "Bob Holland Software Developer" },
@@ -31,17 +32,23 @@ export default function Home() {
           <CardContent>
             <p>
               Welcome to my portfolio site - This has been built with React
-              Router v7, tailwind, and shadcn. Here is a space where you can see
-              some examples of things I have worked on and what I am working on.
+              Router v7, typescript, tailwind, and shadcn.
             </p>
             <p className="pt-2">
-              Here's a list of things that I believe a bring to the table in in
-              development team:
+              Here is a space where you can see some examples of things I have
+              worked on and what I am working on.
             </p>
-            <ul>
-              <li>Determination</li>
-              <li>Creativity</li>
-            </ul>
+
+            <p className="pt-2">
+              I'm a musician and Qualified Teacher turned coder and have now
+              been working in the industry for nearly two years.
+            </p>
+            <p className="pt-2 pb-2">
+              I enjoy the challenge and enjoy the new learning everyday.
+            </p>
+            <Link to="/contact" className="pt-4">
+              <Button>Contact Me</Button>
+            </Link>
           </CardContent>
           {/* <CardFooter>
             <p>Now and into the future</p>

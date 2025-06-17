@@ -36,17 +36,10 @@ export default function Products() {
           <Card>
             <CardHeader>
               <CardTitle>{product.title}</CardTitle>
-              <CardDescription>{product.intro}</CardDescription>
+              {/* <CardDescription>{product.intro}</CardDescription> */}
             </CardHeader>
             <CardContent>
               <p>{product.comment}</p>
-              <div className="flex-justify-center items-center p-4 m-2">
-                <img
-                  src={product.img_url}
-                  alt={product.img_alt}
-                  className="rounded"
-                />
-              </div>
             </CardContent>
             <CardFooter className="grid grid-cols-1 gap-4">
               <Link
@@ -55,7 +48,7 @@ export default function Products() {
                 className="flex justify-center items-center"
               >
                 <Button className="w-[100%] md:w-[70%] lg:w-[50%]">
-                  More detail
+                  Detail
                 </Button>
               </Link>
               <Link
@@ -64,7 +57,7 @@ export default function Products() {
                 className="flex justify-center items-center"
               >
                 <Button className="w-[100%] md:w-[70%] lg:w-[50%]">
-                  View My Build
+                  Build
                 </Button>
               </Link>
               <Link
@@ -73,7 +66,7 @@ export default function Products() {
                 className="flex justify-center items-center"
               >
                 <Button className="w-[100%] md:w-[70%] lg:w-[50%]">
-                  View Manufacturer Page
+                  Manufacturer Page
                 </Button>
               </Link>
             </CardFooter>

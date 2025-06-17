@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, useLoaderData } from "react-router";
 
 import { projects } from "../data/projects";
 
@@ -12,12 +12,10 @@ import {
 } from "../components/ui/card";
 
 import { Button } from "../components/ui/button";
+import type { Route } from "../+types/root";
 
-import { bobCoffee } from "../images/coffee-bob.jpg";
-
-export default function Project({ loaderData }) {
-  const project = loaderData;
-
+export default function Project() {
+  const project = useLoaderData();
   return (
     <main className="m-2 p-2 h-[100%]">
       <header className="p-4 text-center">
@@ -27,7 +25,7 @@ export default function Project({ loaderData }) {
         <h1 className="text-2xl">{project.title}</h1>
       </header>
       <section className="m-2">
-        <Card>
+        <Card key={project.id}>
           <CardHeader>
             <CardTitle>{project.title}</CardTitle>
             <CardDescription>{project.subtitle}</CardDescription>
@@ -59,7 +57,7 @@ export default function Project({ loaderData }) {
   );
 }
 
-export async function loader({ params }) {
+export async function loader({ params }: Route.LoaderArgs) {
   const slug = await params.slug;
   const project = await projects.find((item) => item.slug === slug);
   return project;

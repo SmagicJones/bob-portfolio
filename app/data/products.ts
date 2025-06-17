@@ -55,4 +55,17 @@ export const products: Product[] = [
     link: "https://www.createeducation.com/marketplace/bambu-lab-h2d-laser-combo/",
     comparison_link: "https://bambulab.com/en-gb/h2d",
   },
+  {
+    id: 3,
+    title: "The Meltio M600",
+    intro: "All in One Metal Printing Platform",
+    img_url:
+      "https://3dgbire.com/cdn/shop/files/Meltio_M600_no_background_shadows_1512x.jpg?v=1749113169",
+    img_alt: "Meltio M600 Metal 3D Printer",
+    comment:
+      "3D Printing with Metal with Meltio's Unique technology - here we wanted to draw attention to the applications of the technology first rather than bamboozingly them with stats",
+    slug: "meltio-m600",
+    link: "https://3dgbire.com/products/meltio-m600",
+    comparison_link: "https://meltio3d.com/metal-3d-printers/meltio-m600/",
+  },
 ];

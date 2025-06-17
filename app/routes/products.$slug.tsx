@@ -1,5 +1,5 @@
 import { products } from "../data/products";
-import { Link } from "react-router";
+import { Link, useLoaderData } from "react-router";
 
 import {
   Card,
@@ -11,9 +11,10 @@ import {
 } from "../components/ui/card";
 
 import { Button } from "../components/ui/button";
+import type { Route } from "../+types/root";
 
-export default function Product({ loaderData }) {
-  const product = loaderData;
+export default function Product() {
+  const product = useLoaderData();
 
   return (
     <main className="m-2 p-2">
@@ -30,23 +31,24 @@ export default function Product({ loaderData }) {
             <CardDescription>{product.intro}</CardDescription>
           </CardHeader>
           <CardContent>
+            <div className="flex-justify-center items-center p-4 m-2">
+              <img
+                src={product.img_url}
+                alt={product.img_alt}
+                className="rounded"
+              />
+            </div>
             <p>{product.comment}</p>
           </CardContent>
-          <CardFooter>
-            {/* <Link to={`/projects/${project.slug}`}>
-            <Button>Learn More</Button>
-          </Link> */}
-          </CardFooter>
+          <CardFooter></CardFooter>
         </Card>
       </section>
     </main>
   );
 }
 
-export async function loader({ params }) {
+export async function loader({ params }: Route.LoaderArgs) {
   const slug = await params.slug;
-
   const product = await products.find((item) => item.slug === slug);
-  console.log(product);
   return product;
 }

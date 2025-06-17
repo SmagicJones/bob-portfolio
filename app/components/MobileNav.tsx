@@ -1,8 +1,7 @@
 import { useState, useRef } from "react";
 import { NavLink } from "react-router";
 
-import { MenuIcon, X, ChevronRight } from "lucide-react";
-import { Button } from "../components/ui/button";
+import { MenuIcon, X } from "lucide-react";
 
 import {
   Drawer,
@@ -24,7 +23,7 @@ import {
 
 export default function MobileNav() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const checkboxRef = useRef();
+  const checkboxRef = useRef<HTMLInputElement | null>(null);
 
   function handleMenu() {
     setMenuOpen(false);
@@ -52,8 +51,6 @@ export default function MobileNav() {
                 <DrawerClose className="flex justify-end">
                   <X />
                 </DrawerClose>
-                {/* <DrawerTitle>Menu</DrawerTitle>
-            <DrawerDescription>Get to where you want to be</DrawerDescription> */}
                 <ul className="">
                   <li>
                     <Accordion type="single" collapsible>
