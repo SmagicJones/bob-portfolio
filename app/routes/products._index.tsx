@@ -44,7 +44,6 @@ export default function Products() {
             <CardFooter className="grid grid-cols-1 gap-4">
               <Link
                 to={product.slug}
-                target="_blank"
                 className="flex justify-center items-center"
               >
                 <Button className="w-[100%] md:w-[70%] lg:w-[50%]">
