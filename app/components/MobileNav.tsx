@@ -2,6 +2,8 @@ import { NavLink } from "react-router";
 
 import { MenuIcon, X } from "lucide-react";
 
+import DarkModeToggle from "./DarkModeToggle";
+
 import {
   Drawer,
   DrawerClose,
@@ -111,6 +113,9 @@ export default function MobileNav() {
                   </li>
                 </ul>
               </DrawerHeader>
+              <div className="p-4">
+                <DarkModeToggle />
+              </div>
             </DrawerContent>
           </Drawer>
         </div>

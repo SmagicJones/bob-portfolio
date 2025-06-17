@@ -42,7 +42,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body>
         <DesktopNav />
         <MobileNav />
-        <div className="p-4">
+        <div className="p-4 desk">
           <DarkModeToggle />
         </div>
         {children}
