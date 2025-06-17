@@ -1,4 +1,3 @@
-import { useState, useRef } from "react";
 import { NavLink } from "react-router";
 
 import { MenuIcon, X } from "lucide-react";
@@ -22,24 +21,11 @@ import {
 } from "./ui/accordion";
 
 export default function MobileNav() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const checkboxRef = useRef<HTMLInputElement | null>(null);
-
-  function handleMenu() {
-    setMenuOpen(false);
-    if (checkboxRef.current) {
-      checkboxRef.current.checked = false;
-    }
-  }
   return (
     <main>
       <div className="mobile w-[100%] flex justify-between">
-        <NavLink
-          to="/"
-          className="flex justify-center items-center p-4"
-          onClick={handleMenu}
-        >
-          <h1 className="text-md hover:text-slate-800">Bob Holland</h1>
+        <NavLink to="/" className="flex justify-center items-center p-4">
+          <p className="text-md font-bold hover:text-purple-600">Bob Holland</p>
         </NavLink>
         <div className="p-4">
           <Drawer direction="right">
@@ -82,11 +68,6 @@ export default function MobileNav() {
                         <AccordionTrigger>Work</AccordionTrigger>
                         <AccordionContent>
                           <ul>
-                            <li>
-                              <NavLink to="/work">
-                                <DrawerClose>All Examples</DrawerClose>
-                              </NavLink>
-                            </li>
                             <li>
                               <NavLink to="/products">
                                 <DrawerClose>Products</DrawerClose>

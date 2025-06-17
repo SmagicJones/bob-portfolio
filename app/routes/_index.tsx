@@ -22,7 +22,7 @@ export const meta: MetaFunction = () => [
 
 export default function Home() {
   return (
-    <main>
+    <main className="mb-4">
       <section className="grid md:grid-cols-2 gap-4 m-2">
         <Card>
           <CardHeader>
