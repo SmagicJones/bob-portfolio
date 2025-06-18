@@ -47,4 +47,16 @@ export const landingPages: LandingPage[] = [
     slug: "ultimaker-landing-page",
     link: "https://www.createeducation.com/ultimaker-range/",
   },
+  {
+    id: 3,
+    title: "Tectonic Materials",
+    intro: "Landing page for Tectonic Materials",
+    img_url:
+      "https://3dgbire.com/cdn/shop/files/PYRA_Picture_Spool2_d314671e-839a-4d19-a329-35193553ae2b_1296x.webp?v=1744120489",
+    img_alt: "UltiMaker S6 3D Printer",
+    comment:
+      "A Landing page for Tectonic Materials - here I've aimed to take elements of Tectonic's style on their site to better represent them whilst also making a page that is in keeping with the rest of the site.",
+    slug: "tectonic-landing-page",
+    link: "https://3dgbire.com/pages/tectonic",
+  },
 ];
