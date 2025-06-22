@@ -16,8 +16,7 @@ export const products: Product[] = [
     title: "UltiMaker S8",
     intro:
       "UltiMaker S8 achieves up to 4x the productivity of its predecessor. While also improving print quality. Made possible with our new motion planner UltiMaker Cheetah, new high flow print cores, and an improved feeder. Combining industry-leading dual extrusion printing with our open material platform, allows you to create complex multi-material parts in a fraction of the time.",
-    img_url:
-      "    https://3dgbire.com/cdn/shop/files/UltiMaker-S8-3D-Printer-face-on_1512x.jpg?v=1741616533",
+    img_url: "/images/ultimaker-s8.jpg",
     img_alt:
       "A face on image of the EinScan Libre, there is a screen and a handle to hold, it is predominantly black",
     comment:
@@ -31,8 +30,7 @@ export const products: Product[] = [
     title: "EinScan Libre Scanner",
     intro:
       "The EinScan Libre delivers a fully wireless, standalone 3D scanning experience, powered by its built-in screen and NVIDIA processor. It offers the perfect balance of freedom and efficiency, ensuring reliable results with versatile, user-friendly operation.",
-    img_url:
-      "https://www.createeducation.com/wp-content/uploads/2024/11/Einscan-libre.webp",
+    img_url: "/images/einscan-libre.webp",
     img_alt:
       "face on image of the ultiMaker S8 3D Printer, it is predominantly white",
     comment:
@@ -46,8 +44,7 @@ export const products: Product[] = [
     id: 2,
     title: "Bambu Lab H2D Laser Combo",
     intro: "Rethink Personal Manufacturing",
-    img_url:
-      "https://www.createeducation.com/wp-content/uploads/2025/03/laser-full-combo.jpg",
+    img_url: "/images/laser-full-combo.webp",
     img_alt: "Bambu Lab H2D Laser Combo 3D Printer and Laser Cutter",
     comment:
       "This is a really amazing machine, it has so many capabilities at such a competitive price",
@@ -59,8 +56,7 @@ export const products: Product[] = [
     id: 3,
     title: "The Meltio M600",
     intro: "All in One Metal Printing Platform",
-    img_url:
-      "https://3dgbire.com/cdn/shop/files/Meltio_M600_no_background_shadows_1512x.jpg?v=1749113169",
+    img_url: "/images/meltio-m600.webp",
     img_alt: "Meltio M600 Metal 3D Printer",
     comment:
       "3D Printing with Metal with Meltio's Unique technology - here we wanted to draw attention to the applications of the technology first rather than bamboozingly them with stats",

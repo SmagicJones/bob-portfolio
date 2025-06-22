@@ -53,7 +53,7 @@ export default function Product() {
             <CardDescription>{product.intro}</CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="flex-justify-center items-center p-4 m-2">
+            <div className="flex justify-center items-center p-4 m-2">
               <img
                 src={product.img_url}
                 alt={product.img_alt}

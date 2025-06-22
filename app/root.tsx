@@ -5,6 +5,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useNavigation,
 } from "react-router";
 
 import DesktopNav from "./components/DesktopNav";
@@ -55,9 +56,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
+  const navigation = useNavigation();
+  const isNavigating = Boolean(navigation.location);
   return (
     <main className="min-h-screen">
-      <Outlet />
+      {isNavigating ? (
+        <div className="flex justify-center items-center">
+          <div className="loading-spinner"></div>
+        </div>
+      ) : (
+        <Outlet />
+      )}
     </main>
   );
 }

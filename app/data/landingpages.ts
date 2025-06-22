@@ -16,7 +16,7 @@ export const landingPages: LandingPage[] = [
     id: 0,
     title: "Bambu Range",
     intro: "Landing page for Bambu Lab 3D Printers",
-    img_url: "https://cdn1.bambulab.com/home/a1-bg-340aa6425d09d.jpg",
+    img_url: "/images/bambu-landing.jpg",
     img_alt: "A Bambu Lab 3D printer",
     comment:
       "A Landing page in keeping with the rest of the site for Bambu Lab 3D Printers",
@@ -27,8 +27,7 @@ export const landingPages: LandingPage[] = [
     id: 1,
     title: "Creality Range",
     intro: "Landing page for Creality 3D Printers",
-    img_url:
-      "https://3dgbire.com/cdn/shop/files/a1feb250f5988665f46808469757d1d8_1008x_1080x_41185844-646a-4fd0-92e8-8a20c5a6113a_1512x.webp?v=1737560306",
+    img_url: "/images/creality-landing.webp",
     img_alt: "Creality K2 Plus Combo 3D Printer",
     comment:
       "A Landing page for Creality - a new brand to the company -  in keeping with the rest of the site and produced with very few resources",
@@ -39,8 +38,7 @@ export const landingPages: LandingPage[] = [
     id: 2,
     title: "UltiMaker Range",
     intro: "Landing page for UltiMaker 3D Printers",
-    img_url:
-      "https://www.createeducation.com/wp-content/uploads/2025/06/S6-Hero-optim-500x500.jpg",
+    img_url: "/images/s6-landing.webp",
     img_alt: "UltiMaker S6 3D Printer",
     comment:
       "A Landing page for UltiMaker 3D Printers that also reflects the rest of the site",
@@ -51,8 +49,7 @@ export const landingPages: LandingPage[] = [
     id: 3,
     title: "Tectonic Materials",
     intro: "Landing page for Tectonic Materials",
-    img_url:
-      "https://3dgbire.com/cdn/shop/files/PYRA_Picture_Spool2_d314671e-839a-4d19-a329-35193553ae2b_1296x.webp?v=1744120489",
+    img_url: "/images/tectonic-landing.webp",
     img_alt: "UltiMaker S6 3D Printer",
     comment:
       "A Landing page for Tectonic Materials - here I've aimed to take elements of Tectonic's style on their site to better represent them whilst also making a page that is in keeping with the rest of the site.",
