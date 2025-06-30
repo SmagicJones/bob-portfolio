@@ -45,4 +45,14 @@ export const projects: Project[] = [
     github_link: "https://github.com/SmagicJones/nasa-picture-of-the-day",
     slug: "expanded-horizons",
   },
+  {
+    id: 3,
+    title: "Bob Teaches Music",
+    subtitle: "A new site for my music teaching",
+    short_content: "This is a work in progress",
+    long_content: "I like how this is coming together",
+    hosted_link: "https://bobteachesmusic.netlify.app",
+    github_link: "https://github.com/SmagicJones/bobteachesmusic",
+    slug: "bobteaches-music",
+  },
 ];

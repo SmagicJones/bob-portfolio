@@ -52,22 +52,24 @@ export default function Project() {
           <CardContent>
             <p>{project.short_content}</p>
             <p>{project.long_content}</p>
-            <div className="flex flex-row gap-4 mt-2">
-              <Link
-                to={project.hosted_link}
-                target="_blank"
-                className="hover:font-bold"
-              >
+            <Link
+              to={`${project.hosted_link}`}
+              target="_blank"
+              className="flex justify-center items-center p-4"
+            >
+              <Button className="w-[100%] md:w-[70%] lg:w-[50%]">
                 Hosted Project
-              </Link>
-              <Link
-                to={project.github_link}
-                target="_blank"
-                className="hover:font-bold"
-              >
-                Github
-              </Link>
-            </div>
+              </Button>
+            </Link>
+            <Link
+              to={`${project.github_link}`}
+              target="_blank"
+              className="flex justify-center items-center p-4"
+            >
+              <Button className="w-[100%] md:w-[70%] lg:w-[50%]">
+                Github Repository
+              </Button>
+            </Link>
           </CardContent>
           <CardFooter className="grid grid-cols-1 gap-4 p-4"></CardFooter>
         </Card>
