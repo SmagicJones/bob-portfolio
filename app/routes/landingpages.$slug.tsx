@@ -38,8 +38,11 @@ export default function LandingPage() {
   return (
     <main className="pb-4 h-full">
       <header className="p-4 text-center">
-        <Link to="/projects" className="flex justify-center items-center p-4">
-          <Button>All Projects</Button>
+        <Link
+          to="/landingpages"
+          className="flex justify-center items-center p-4"
+        >
+          <Button>All Pages</Button>
         </Link>
         <h1 className="text-2xl">{landingPage.title}</h1>
       </header>
