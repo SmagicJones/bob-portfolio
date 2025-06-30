@@ -12,7 +12,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 0,
-    title: "Movies with Remix and MongoDB",
+    title: "Movies",
     subtitle: "An amazing learning experience",
     short_content:
       "This is an ongoing build of a remix app which is connected to a mongoDB sample movie database.",
@@ -24,7 +24,7 @@ export const projects: Project[] = [
   },
   {
     id: 1,
-    title: "Darwen Masters Swimming Club",
+    title: "Charity Website",
     subtitle: "A Charity Website for a Local Swimming Club",
     short_content:
       "I wanted to keep costs as low as possible so I have established hosting with github pages and then managed to buy the domain name.  The Website is a bootstrap template and is due an update.",
