@@ -107,7 +107,7 @@ export default function MobileNav() {
                     <Accordion type="single" collapsible>
                       <AccordionItem value="item-1">
                         <AccordionTrigger className="cursor-pointer hover:text-slate-400">
-                          Pages
+                          <NavLink to="/pages">Pages</NavLink>
                         </AccordionTrigger>
                         <AccordionContent>
                           <ul>
