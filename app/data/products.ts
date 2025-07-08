@@ -64,4 +64,15 @@ export const products: Product[] = [
     link: "https://3dgbire.com/products/meltio-m600",
     comparison_link: "https://meltio3d.com/metal-3d-printers/meltio-m600/",
   },
+  {
+    id: 4,
+    title: "The EinScan Rigil",
+    intro: "Rapid, Redefined, Reliable",
+    img_url: "/images/rigil-header.jpeg",
+    img_alt: "EinScan Rigil 3D Scanner",
+    comment: "An Amazing looking product",
+    slug: "einscan-rigil",
+    link: "https://3dgbire.com/products/einscan-rigil",
+    comparison_link: "https://www.einstar.com/products/einscan-rigil",
+  },
 ];
