@@ -61,7 +61,7 @@ export default function App() {
   return (
     <main className="min-h-screen">
       {isNavigating ? (
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center h-screen">
           <div className="loading-spinner"></div>
         </div>
       ) : (
