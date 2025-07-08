@@ -70,7 +70,8 @@ export const products: Product[] = [
     intro: "Rapid, Redefined, Reliable",
     img_url: "/images/rigil-header.jpeg",
     img_alt: "EinScan Rigil 3D Scanner",
-    comment: "An Amazing looking product",
+    comment:
+      "An Amazing looking product, I was pleased to use some simple js to choose the larger image from the smaller ones in the boxes.",
     slug: "einscan-rigil",
     link: "https://3dgbire.com/products/einscan-rigil",
     comparison_link: "https://www.einstar.com/products/einscan-rigil",
