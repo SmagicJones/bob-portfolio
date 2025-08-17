@@ -55,4 +55,15 @@ export const projects: Project[] = [
     github_link: "https://github.com/SmagicJones/bobteachesmusic",
     slug: "bobteaches-music",
   },
+  {
+    id: 4,
+    title: "My First Ever Game!",
+    subtitle: "Built in a html canvas using JavaScript",
+    short_content: "This has been so much fun and I have learned so much...",
+    long_content:
+      "I wanted to find a starting point into making a game and was looking for the easiest starting point for someone familiar with html, css and js - so here I am with the HTML Canvas - I have been using OOP principles to create the game and I am really enjoying it.  There's loads of things I want to do to extend this but I've been so happy to find a starting point! and celebrating this as a win!",
+    hosted_link: "https://smagicjones.github.io/shoot-em-up/",
+    github_link: "https://github.com/SmagicJones/shoot-em-up",
+    slug: "my-first-game",
+  },
 ];

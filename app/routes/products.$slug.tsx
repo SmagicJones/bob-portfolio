@@ -62,7 +62,22 @@ export default function Product() {
             </div>
             <p>{product.comment}</p>
           </CardContent>
-          <CardFooter></CardFooter>
+          <CardFooter>
+            <Link
+              to={product.link}
+              target="_blank"
+              className="flex justify-center items-center p-4"
+            >
+              <Button>View Build</Button>
+            </Link>
+            <Link
+              to="/products"
+              target="_blank"
+              className="flex justify-center items-center p-4"
+            >
+              <Button>View other examples</Button>
+            </Link>
+          </CardFooter>
         </Card>
       </section>
     </main>

@@ -76,4 +76,28 @@ export const products: Product[] = [
     link: "https://3dgbire.com/products/einscan-rigil",
     comparison_link: "https://www.einstar.com/products/einscan-rigil",
   },
+  {
+    id: 5,
+    title: "Bambu Lab H2D Pro",
+    intro: "Professional Dual-Nozzle 3D Printing Solution",
+    img_url: "/images/bambu-h2d-pro.webp",
+    img_alt: "Bambu Lab H2D Pro 3D Printer",
+    comment:
+      "Another amazing piece of hardware from bambu - addresses alot of ethernet security concerns and still with affordable prices.",
+    slug: "bambu-lab-h2d-pro",
+    link: "https://bambulab.com/en-gb/h2d-pro",
+    comparison_link: "https://bambulab.com/en-gb/h2d-pro",
+  },
+  {
+    id: 6,
+    title: "Bambu PETG Translucent",
+    intro: "A high-quality filament for 3D printing",
+    img_url: "/images/bambu-petg-translucent.webp",
+    img_alt: "Bambu PETG Translucent Filament",
+    comment:
+      "A high-quality filament for 3D printing, I was asked to create a product page that would be suitable for a marketplace.",
+    slug: "bambu-lab-h2d-pro",
+    link: "https://www.createeducation.com/marketplace/bambu-petg-translucent-1-75mm-1kg/",
+    comparison_link: "https://uk.store.bambulab.com/products/petg-translucent",
+  },
 ];
