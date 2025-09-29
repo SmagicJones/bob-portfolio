@@ -104,33 +104,36 @@ export default function Contact() {
   );
 }
 
-export async function action({ request }: ActionFunctionArgs) {
-  const formData = await request.formData();
-  const formEntry = Object.fromEntries(formData);
-  const name = formEntry.name as string;
-  const email = formEntry.email as string;
-  const message = formEntry.message as string;
 
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
-    },
-  });
 
-  try {
-    const info = await transporter.sendMail({
-      from: `"${name}" <${email}>`,
-      to: process.env.EMAIL_USER,
-      subject: `Contact Form Submission from ${name}`,
-      text: message,
-      html: `<p>${message}</p><p>From: ${name} (${email})</p>`,
-    });
-    console.log("email sent", info.messageId);
-    return { success: true };
-  } catch (err) {
-    console.error("Failed to send email", err);
-    return { success: false, error: "Failed to send" };
-  }
-}
+
+// export async function action({ request }: ActionFunctionArgs) {
+//   const formData = await request.formData();
+//   const formEntry = Object.fromEntries(formData);
+//   const name = formEntry.name as string;
+//   const email = formEntry.email as string;
+//   const message = formEntry.message as string;
+
+//   const transporter = nodemailer.createTransport({
+//     service: "gmail",
+//     auth: {
+//       user: process.env.EMAIL_USER,
+//       pass: process.env.EMAIL_PASS,
+//     },
+//   });
+
+//   try {
+//     const info = await transporter.sendMail({
+//       from: `"${name}" <${email}>`,
+//       to: process.env.EMAIL_USER,
+//       subject: `Contact Form Submission from ${name}`,
+//       text: message,
+//       html: `<p>${message}</p><p>From: ${name} (${email})</p>`,
+//     });
+//     console.log("email sent", info.messageId);
+//     return { success: true };
+//   } catch (err) {
+//     console.error("Failed to send email", err);
+//     return { success: false, error: "Failed to send" };
+//   }
+// }

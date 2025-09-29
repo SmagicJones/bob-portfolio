@@ -14,6 +14,7 @@ import {
 import { projects, type Project } from "~/data/projects";
 import { products, type Product } from "~/data/products";
 import { landingPages, type LandingPage } from "~/data/landingpages";
+import { features, type Feature } from "~/data/features";
 import { Button } from "./ui/button";
 
 export default function DesktopNav() {
@@ -109,6 +110,35 @@ export default function DesktopNav() {
                       </div>
                       <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                         {landingPage.intro}
+                      </p>
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>
+              <NavLink
+                to="/Features"
+                className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+              >
+                Features
+              </NavLink>
+            </NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                {features.map((feature: Feature) => (
+                  <li key={feature.id}>
+                    <NavLink
+                      to={`/features/${feature.slug}`}
+                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                    >
+                      <div className="text-sm font-medium leading-none">
+                        {feature.title}
+                      </div>
+                      <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                        {feature.intro}
                       </p>
                     </NavLink>
                   </li>

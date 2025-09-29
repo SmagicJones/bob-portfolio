@@ -25,6 +25,7 @@ import {
 import { projects, type Project } from "~/data/projects";
 import { products, type Product } from "~/data/products";
 import { landingPages, type LandingPage } from "~/data/landingpages";
+import { features, type Feature } from "~/data/features";
 
 export default function MobileNav() {
   return (
@@ -119,6 +120,31 @@ export default function MobileNav() {
                                 >
                                   <DrawerClose className="cursor-pointer">
                                     {landingPage.title}
+                                  </DrawerClose>
+                                </NavLink>
+                              </li>
+                            ))}
+                          </ul>
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
+                  </li>
+                  <li>
+                    <Accordion type="single" collapsible>
+                      <AccordionItem value="item-1">
+                        <AccordionTrigger className="cursor-pointer hover:text-slate-400">
+                          <NavLink to="/features">Features</NavLink>
+                        </AccordionTrigger>
+                        <AccordionContent>
+                          <ul>
+                            {features.map((feature: Feature) => (
+                              <li>
+                                <NavLink
+                                  to={`/features/${feature.slug}`}
+                                  className="cursor-pointer hover:text-slate-400"
+                                >
+                                  <DrawerClose className="cursor-pointer">
+                                    {feature.title}
                                   </DrawerClose>
                                 </NavLink>
                               </li>

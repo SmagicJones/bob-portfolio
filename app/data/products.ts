@@ -92,12 +92,24 @@ export const products: Product[] = [
     id: 6,
     title: "Bambu PETG Translucent",
     intro: "A high-quality filament for 3D printing",
-    img_url: "/images/bambu-petg-translucent.webp",
+    img_url: "/images/bambu-petg-translucent-filament.webp",
     img_alt: "Bambu PETG Translucent Filament",
     comment:
       "A high-quality filament for 3D printing, I was asked to create a product page that would be suitable for a marketplace.",
-    slug: "bambu-lab-h2d-pro",
+    slug: "bambu-petg-translucent",
     link: "https://www.createeducation.com/marketplace/bambu-petg-translucent-1-75mm-1kg/",
     comparison_link: "https://uk.store.bambulab.com/products/petg-translucent",
+  },
+  {
+    id: 7,
+    title: "Bambu Lab H2S Laser Combo",
+    intro: "Your Personal Manufacturing Hub",
+    img_url: "/images/H2S-laser-combo.webp",
+    img_alt: "Bambu Lab H2S Laser Combo",
+    comment:
+      "The latest printer from Bambu Lab, this is a great machine that combines 3D printing and laser cutting in one device.",
+    slug: "bambu-h2s-laser-combo",
+    link: "https://www.createeducation.com/marketplace/bambu-lab-h2s-laser-combo/",
+    comparison_link: "https://uk.store.bambulab.com/products/h2s",
   },
 ];
