@@ -13,6 +13,17 @@ export interface LandingPage {
 
 export const landingPages: LandingPage[] = [
   {
+    id: 11,
+    title: "Filamentive",
+    intro: "A landing page for Filamentive Filaments",
+    img_url: "/images/filamentive-logo.svg",
+    img_alt: "Filamentive Logo",
+    comment:
+      "A landing page for filamentive filaments.  I am pleased with this page - how it looks to the eye and under the surface how tidy the code is. It is likely one of the tidiest pages - codewise - on the entire site",
+    slug: "filamentive-landing-page",
+    link: "https://3dgbire.com/pages/filamentive",
+  },
+  {
     id: 0,
     title: "Bambu Range",
     intro: "Landing page for Bambu Lab 3D Printers",

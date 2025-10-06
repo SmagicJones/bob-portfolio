@@ -53,9 +53,28 @@ export default function LandingPage() {
             <CardDescription>{landingPage.intro}</CardDescription>
           </CardHeader>
           <CardContent>
+            <img
+              src={landingPage.img_url}
+              alt={landingPage.img_alt}
+              className="w-full h-auto p-4"
+            />
             <p>{landingPage.comment}</p>
           </CardContent>
-          <CardFooter className="grid grid-cols-1 gap-4 p-4"></CardFooter>
+          <CardFooter className="grid grid-cols-1 gap-4 p-4">
+            <Link
+              to={landingPage.link}
+              target="_blank"
+              className="flex justify-center items-center p-4"
+            >
+              <Button>View Build</Button>
+            </Link>
+            <Link
+              to="/landingpages"
+              className="flex justify-center items-center p-4"
+            >
+              <Button>View other examples</Button>
+            </Link>
+          </CardFooter>
         </Card>
       </section>
     </main>

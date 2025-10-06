@@ -58,6 +58,14 @@ export default function LandingPages() {
                   View My Build
                 </Button>
               </Link>
+              <Link
+                to={`/landingpages/${page.slug}`}
+                className="flex justify-center items-center"
+              >
+                <Button className="w-[100%] md:w-[70%] lg:w-[50%]">
+                  More detail
+                </Button>
+              </Link>
             </CardFooter>
           </Card>
         ))}
