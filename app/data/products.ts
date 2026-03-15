@@ -112,4 +112,16 @@ export const products: Product[] = [
     link: "https://www.createeducation.com/marketplace/bambu-lab-h2s-laser-combo/",
     comparison_link: "https://uk.store.bambulab.com/products/h2s",
   },
+  {
+    id: 8,
+    title: "Raise3D RMS 220",
+    intro: "High-Efficiency Batch Production",
+    img_url: "/images/rms-220.webp",
+    img_alt: "Raise3D RMS 220",
+    comment: "A new powder 3D Printer from Raise - unique at this price point",
+    slug: "raise-rms-220",
+    link: "https://3dgbire.com/products/raise3d-rms220-series-standard-package",
+    comparison_link:
+      "https://shop.raise3d.com/products/raise3d-rms220-series-complete-package",
+  },
 ];
