@@ -50,7 +50,7 @@ export default function Project() {
             <CardDescription>{project.subtitle}</CardDescription>
           </CardHeader>
           <CardContent>
-            <p>{project.short_content}</p>
+            <p className="pb-4">{project.short_content}</p>
             <p>{project.long_content}</p>
             <Link
               to={`${project.hosted_link}`}
